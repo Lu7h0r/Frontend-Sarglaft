@@ -2,19 +2,17 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-progress',
-  template: `
-    <p>
-      progress works!
-    </p>
-  `,
-  styles: [
-  ]
+  templateUrl: './progress.component.html',
+  styles: [],
 })
 export class ProgressComponent implements OnInit {
+  porcentajeA: number = 65;
+  porcentajeB: number = 35;
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
-
+  // actualizar(event: number) {
+  //   console.log('Evento: ', event);
+  // }
 }
