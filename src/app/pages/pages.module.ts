@@ -15,6 +15,8 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
 // temporal | Componentes reutilizables
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
 import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.component';
+import { PromesasComponent } from './promesas/promesas.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.co
     IncrementadorComponent,
     GraficoDonaComponent,
     AccountSettingsComponent,
+    PromesasComponent,
+    RxjsComponent,
   ],
   exports: [DashboardComponent, ProgressComponent, Graficas1Component],
   // Acá me traifo mi modulo con modulos compartidos que se usaran en todo lado
