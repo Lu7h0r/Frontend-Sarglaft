@@ -11,6 +11,7 @@ import { PAGES_ROUTES } from './pages.routes';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
 import { Graficas1Component } from './graficas1/graficas1.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 // temporal | Componentes reutilizables
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
 import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.component';
@@ -23,6 +24,7 @@ import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.co
     Graficas1Component,
     IncrementadorComponent,
     GraficoDonaComponent,
+    AccountSettingsComponent,
   ],
   exports: [DashboardComponent, ProgressComponent, Graficas1Component],
   // Acá me traifo mi modulo con modulos compartidos que se usaran en todo lado
