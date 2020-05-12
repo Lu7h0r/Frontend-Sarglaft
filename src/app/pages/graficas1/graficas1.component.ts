@@ -24,28 +24,28 @@ export class Graficas1Component implements OnInit {
 
   graficos: any = {
     grafico1: {
-      labels: ['Con Frijoles', 'Con Natilla', 'Con tocino'],
+      labels: ['Unicas', 'Guardadas', 'Repetidas'],
       data: [24, 30, 46],
       type: 'doughnut',
-      leyenda: 'El pan se come con',
+      leyenda: 'Consultas realizadas',
     },
     grafico2: {
       labels: ['Hombres', 'Mujeres'],
       data: [4500, 6000],
       type: 'doughnut',
-      leyenda: 'Entrevistados',
+      leyenda: 'Usuarios Consultados',
     },
     grafico3: {
-      labels: ['Si', 'No'],
+      labels: ['Almacenado', 'Service'],
       data: [95, 5],
       type: 'doughnut',
-      leyenda: '¿Le dan gases los frijoles?',
+      leyenda: 'Consultas del Aplicativo',
     },
     grafico4: {
-      labels: ['No', 'Si'],
+      labels: ['Bajo', 'Alto'],
       data: [85, 15],
       type: 'doughnut',
-      leyenda: '¿Le importa que le den gases?',
+      leyenda: 'Consumo de recursos',
     },
   };
 

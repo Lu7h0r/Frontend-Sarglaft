@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 // este modulo es temporal
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // Rutas
 import { AppRoutingModule } from './app-routing.module';
 import { APP_ROUTES } from './app.routes';
@@ -11,6 +11,7 @@ import { PagesModule } from './pages/pages.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, RegisterComponent],
@@ -21,6 +22,8 @@ import { RegisterComponent } from './login/register.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule, // este import es temporal
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
 
   providers: [],

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+// import { FormGroup } from '@angular/forms';
 
 declare function iniciar_plugins();
 @Component({
@@ -8,6 +9,7 @@ declare function iniciar_plugins();
   styleUrls: ['./login.component.css'], // asignamos css por ruta => styleUrls:
 })
 export class LoginComponent implements OnInit {
+  // forma: FormGroup;
   constructor(public router: Router) {}
 
   ngOnInit(): void {
