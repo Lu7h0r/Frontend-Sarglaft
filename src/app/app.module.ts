@@ -22,7 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule, // este import es temporal
-    ReactiveFormsModule,
+    ReactiveFormsModule, // este import es temporal
     HttpClientModule,
   ],
 

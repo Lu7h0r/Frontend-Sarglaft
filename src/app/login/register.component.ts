@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+// Modulo de formularios
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 // import swal from 'sweetalert';
 import { UsuarioService } from '../services/service.index';
 import { Usuario } from '../models/usuario.model';
 import { Router } from '@angular/router';
+// iniciar plugins jQuery
 declare function iniciar_plugins();
 @Component({
   selector: 'app-register',
@@ -11,10 +13,12 @@ declare function iniciar_plugins();
   styleUrls: ['./login.component.css'], // asignamos css por ruta => styleUrls:
 })
 export class RegisterComponent implements OnInit {
+  // Traigo todo el formulario de registercomponent.html
   forma: FormGroup;
 
   constructor(public _usuarioService: UsuarioService, public router: Router) {}
 
+  // funcion re utilizable para comprar si 2 campos son iguales
   sonIguales(campo1: string, campo2: string) {
     return (group: FormGroup) => {
       let pass1 = group.controls[campo1].value;
@@ -30,7 +34,8 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    iniciar_plugins();
+    iniciar_plugins(); //Cargo jQuery en register
+    // controlar formulario y sus campos
     this.forma = new FormGroup(
       {
         nombre: new FormControl(null, Validators.required),
@@ -42,8 +47,8 @@ export class RegisterComponent implements OnInit {
       { validators: this.sonIguales('password', 'password2') }
     );
     this.forma.setValue({
-      nombre: 'Alex',
-      correo: 'test@test.com',
+      nombre: 'Alex Bautista',
+      correo: 'ebautista@coem.co',
       password: '123456',
       password2: '123456',
       condiciones: true,
@@ -51,25 +56,19 @@ export class RegisterComponent implements OnInit {
   }
 
   registrarUsuario() {
-    if (this.forma.invalid) {
-      return;
-    }
-
     if (!this.forma.value.condiciones) {
       // swal('Importante', 'Debe aceptar los terminos y condiciones', 'warning');
+      console.log('Debe aceptar los terminos');
 
-      return;
+      let usuario = new Usuario(
+        this.forma.value.nombre,
+        this.forma.value.correo,
+        this.forma.value.password
+      );
+
+      this._usuarioService.crearUsuario(usuario).subscribe((resp) => {
+        console.log(resp);
+      });
     }
-
-    // console.log(this.forma.value);
-    let usuario = new Usuario(
-      this.forma.value.nombre,
-      this.forma.value.correo,
-      this.forma.value.password
-    );
-    this._usuarioService.crearUsuario(usuario).subscribe((resp) => {
-      console.log(resp);
-      this.router.navigate(['/login']);
-    });
   }
 }

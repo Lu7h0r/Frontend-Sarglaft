@@ -16,7 +16,9 @@
                             <a routerLinkActive="active" routerLink="/account-settings">Account Setting</a
               >
             </li>
-            <li><a routerLink="/login">Logout</a></li>
+            <li>
+              <a class="pointer" (click)="_usuarioService.logout()">Salir</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-devider"></li>
