@@ -9,6 +9,7 @@ import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 // Guards
 import { LoginGuardGuard } from '../services/service.index';
+import { ConsultasComponent } from './consultas/consultas.component';
 
 const pagesRoutes: Routes = [
   {
@@ -30,6 +31,11 @@ const pagesRoutes: Routes = [
         path: 'graficas1',
         component: Graficas1Component,
         data: { titulo: 'Reportes - Controles Empresariales' },
+      },
+      {
+        path: 'consultas',
+        component: ConsultasComponent,
+        data: { titulo: 'Consultas - Controles Empresariales' },
       },
       {
         path: 'promesas',
