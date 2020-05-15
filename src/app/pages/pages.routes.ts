@@ -7,9 +7,11 @@ import { Graficas1Component } from './graficas1/graficas1.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { ConsultasComponent } from './consultas/consultas.component';
+import { CrearClieteComponent } from './crear-cliete/crear-cliete.component';
 // Guards
 import { LoginGuardGuard } from '../services/service.index';
-import { ConsultasComponent } from './consultas/consultas.component';
+import { CrearProveedorComponent } from './crear-proveedor/crear-proveedor.component';
 
 const pagesRoutes: Routes = [
   {
@@ -36,6 +38,16 @@ const pagesRoutes: Routes = [
         path: 'consultas',
         component: ConsultasComponent,
         data: { titulo: 'Consultas - Controles Empresariales' },
+      },
+      {
+        path: 'crear-cliente',
+        component: CrearClieteComponent,
+        data: { titulo: 'Crear Cliente - Controles Empresariales' },
+      },
+      {
+        path: 'crear-proveedor',
+        component: CrearProveedorComponent,
+        data: { titulo: 'Crear Proveedor - Controles Empresariales' },
       },
       {
         path: 'promesas',
