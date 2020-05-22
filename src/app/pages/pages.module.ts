@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 // Libreria para graficos
 import { ChartsModule } from 'ng2-charts';
 // Mis Modulos
+import { PipesModule } from '../pipes/pipes.module';
 import { PagesComponent } from './pages.component';
 import { SharedModule } from '../shared/shared.module';
 // Mis Rutas
@@ -18,9 +19,8 @@ import { IncrementadorComponent } from '../components/incrementador/incrementado
 import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.component';
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
-import { ConsultasComponent } from './consultas/consultas.component';
-import { CrearClieteComponent } from './crear-cliete/crear-cliete.component';
-import { CrearProveedorComponent } from './crear-proveedor/crear-proveedor.component';
+import { CommonModule } from '@angular/common';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -33,19 +33,18 @@ import { CrearProveedorComponent } from './crear-proveedor/crear-proveedor.compo
     AccountSettingsComponent,
     PromesasComponent,
     RxjsComponent,
-    ConsultasComponent,
-    CrearClieteComponent,
-    CrearProveedorComponent,
+    ProfileComponent,
   ],
   exports: [DashboardComponent, ProgressComponent, Graficas1Component],
   // Acá me traifo mi modulo con modulos compartidos que se usaran en todo lado
   // Finalmente me traigo mi archivo de rutas de PagesModule
   imports: [
+    CommonModule,
     SharedModule,
     PAGES_ROUTES,
     FormsModule,
-    ReactiveFormsModule,
     ChartsModule,
+    PipesModule,
   ],
 })
 export class PagesModule {}

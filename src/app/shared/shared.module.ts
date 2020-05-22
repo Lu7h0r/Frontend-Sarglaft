@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 // Modulo para iterar sobre html
+import { PipesModule } from '../pipes/pipes.module';
 import { CommonModule } from '@angular/common';
 // Activamos rotuterModule para poderlo usar en el sidebar
 import { RouterModule } from '@angular/router';
@@ -10,7 +11,7 @@ import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
-  imports: [RouterModule, CommonModule],
+  imports: [RouterModule, CommonModule, PipesModule],
   declarations: [
     BreadcrumbsComponent,
     HeaderComponent,

@@ -34,7 +34,8 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    iniciar_plugins(); //Cargo jQuery en register
+    //Cargo jQuery en register
+    iniciar_plugins();
     // controlar formulario y sus campos
     this.forma = new FormGroup(
       {
@@ -46,6 +47,7 @@ export class RegisterComponent implements OnInit {
       },
       { validators: this.sonIguales('password', 'password2') }
     );
+    // Fakde
     this.forma.setValue({
       nombre: 'Alex Bautista',
       correo: 'ebautista@coem.co',
@@ -58,7 +60,7 @@ export class RegisterComponent implements OnInit {
   registrarUsuario() {
     if (!this.forma.value.condiciones) {
       // swal('Importante', 'Debe aceptar los terminos y condiciones', 'warning');
-      console.log('Debe aceptar los terminos');
+      // console.log('Debe aceptar los terminos');
 
       let usuario = new Usuario(
         this.forma.value.nombre,

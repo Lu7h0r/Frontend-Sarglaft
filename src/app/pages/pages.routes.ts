@@ -7,11 +7,9 @@ import { Graficas1Component } from './graficas1/graficas1.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
-import { ConsultasComponent } from './consultas/consultas.component';
-import { CrearClieteComponent } from './crear-cliete/crear-cliete.component';
 // Guards
 import { LoginGuardGuard } from '../services/service.index';
-import { CrearProveedorComponent } from './crear-proveedor/crear-proveedor.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const pagesRoutes: Routes = [
   {
@@ -35,34 +33,14 @@ const pagesRoutes: Routes = [
         data: { titulo: 'Reportes - Controles Empresariales' },
       },
       {
-        path: 'consultas',
-        component: ConsultasComponent,
-        data: { titulo: 'Consultas - Controles Empresariales' },
-      },
-      {
-        path: 'crear-cliente',
-        component: CrearClieteComponent,
-        data: { titulo: 'Crear Cliente - Controles Empresariales' },
-      },
-      {
-        path: 'crear-proveedor',
-        component: CrearProveedorComponent,
-        data: { titulo: 'Crear Proveedor - Controles Empresariales' },
-      },
-      {
-        path: 'promesas',
-        component: PromesasComponent,
-        data: { titulo: 'Promesas - Controles Empresariales' },
-      },
-      {
-        path: 'rxjs',
-        component: RxjsComponent,
-        data: { titulo: 'dev RxJs - Controles Empresariales' },
-      },
-      {
         path: 'account-settings',
         component: AccountSettingsComponent,
         data: { titulo: 'Ajustes - Controles Empresariales' },
+      },
+      {
+        path: 'profile',
+        component: ProfileComponent,
+        data: { titulo: 'Mi Cuenta - Controles Empresariales' },
       },
       { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
     ],
