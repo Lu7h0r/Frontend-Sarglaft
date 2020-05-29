@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
+declare function iniciar_plugins();
+
 @Component({
   selector: 'app-nopagefound',
   templateUrl: './nopagefound.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class NopagefoundComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit() {
+    iniciar_plugins();
   }
-
 }

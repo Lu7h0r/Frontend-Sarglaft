@@ -15,6 +15,17 @@ export class SidebarService {
         { titulo: 'Reportes', url: '/graficas1' },
       ],
     },
+    {
+      titulo: 'Modificar',
+      icono: 'mdi mdi-folder-lock-open',
+      submenu: [
+        { titulo: 'Usuarios', url: '/usuarios' },
+        { titulo: 'StakeHolders', url: '/stakeholders' },
+        { titulo: 'Clientes', url: '/clientes' },
+        { titulo: 'Empleados', url: '/empleados' },
+        { titulo: 'Proveedores', url: '/proveedores' },
+      ],
+    },
   ];
 
   constructor() {}

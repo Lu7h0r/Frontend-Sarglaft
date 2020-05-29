@@ -21,6 +21,8 @@ import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { CommonModule } from '@angular/common';
 import { ProfileComponent } from './profile/profile.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { ProfileComponent } from './profile/profile.component';
     PromesasComponent,
     RxjsComponent,
     ProfileComponent,
+    UsuariosComponent,
+    ModalUploadComponent,
   ],
   exports: [DashboardComponent, ProgressComponent, Graficas1Component],
   // Acá me traifo mi modulo con modulos compartidos que se usaran en todo lado

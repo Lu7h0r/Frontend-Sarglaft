@@ -10,6 +10,7 @@ import { RxjsComponent } from './rxjs/rxjs.component';
 // Guards
 import { LoginGuardGuard } from '../services/service.index';
 import { ProfileComponent } from './profile/profile.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
 
 const pagesRoutes: Routes = [
   {
@@ -41,6 +42,12 @@ const pagesRoutes: Routes = [
         path: 'profile',
         component: ProfileComponent,
         data: { titulo: 'Mi Cuenta - Controles Empresariales' },
+      },
+      // CRUDS
+      {
+        path: 'usuarios',
+        component: UsuariosComponent,
+        data: { titulo: 'Usuarios - Controles Empresariales' },
       },
       { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
     ],
