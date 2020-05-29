@@ -11,6 +11,7 @@ import { RxjsComponent } from './rxjs/rxjs.component';
 import { LoginGuardGuard } from '../services/service.index';
 import { ProfileComponent } from './profile/profile.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
+import { StakeholdersComponent } from './stakeholders/stakeholders.component';
 
 const pagesRoutes: Routes = [
   {
@@ -48,6 +49,11 @@ const pagesRoutes: Routes = [
         path: 'usuarios',
         component: UsuariosComponent,
         data: { titulo: 'Usuarios - Controles Empresariales' },
+      },
+      {
+        path: 'stakeholders',
+        component: StakeholdersComponent,
+        data: { titulo: 'Stakeholders - Controles Empresariales' },
       },
       { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
     ],

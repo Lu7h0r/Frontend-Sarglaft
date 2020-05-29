@@ -23,6 +23,7 @@ import { CommonModule } from '@angular/common';
 import { ProfileComponent } from './profile/profile.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
+import { StakeholdersComponent } from './stakeholders/stakeholders.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ModalUploadComponent } from '../components/modal-upload/modal-upload.co
     ProfileComponent,
     UsuariosComponent,
     ModalUploadComponent,
+    StakeholdersComponent,
   ],
   exports: [DashboardComponent, ProgressComponent, Graficas1Component],
   // Acá me traifo mi modulo con modulos compartidos que se usaran en todo lado
