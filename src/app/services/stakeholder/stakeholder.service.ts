@@ -28,7 +28,7 @@ export class StakeholderService {
   borrarStakeholder(id: string) {
     let url = URL_SERVICES + '/stakeholder/' + id;
     url += '?token=' + this._usuarioService.token;
-    return this.http.delete(url).map((resp) => {
+    return this.http.delete(url).map((resp: any) => {
       Swal.fire({
         title: 'StakeHolder Borrado',
         text: 'Se ha eliminado correctamente',

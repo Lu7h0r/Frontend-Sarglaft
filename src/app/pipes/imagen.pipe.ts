@@ -26,7 +26,7 @@ export class ImagenPipe implements PipeTransform {
       case 'empleado':
         url += '/empleados/' + img;
         break;
-      case 'proveedore':
+      case 'proveedor':
         url += '/proveedores/' + img;
         break;
       case 'usuario':
@@ -37,6 +37,6 @@ export class ImagenPipe implements PipeTransform {
         url += '/usuarios/xxx';
     }
 
-    return 'funciona el pipe';
+    return;
   }
 }

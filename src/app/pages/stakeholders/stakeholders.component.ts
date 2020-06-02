@@ -46,33 +46,28 @@ export class StakeholdersComponent implements OnInit {
     this._stakeHolderService.actualizarStakeholder(stakeholder).subscribe();
   }
 
-  borrarHospital(stakeholder: Stakeholder) {
+  borrarStakeholder(stakeholder: Stakeholder) {
     this._stakeHolderService
       .borrarStakeholder(stakeholder._id)
       .subscribe(() => this.cargarStakeholders());
   }
 
   crearStakeholder() {
-    Swal.fire({
-      title: 'Crear Stakeholder',
-      text: 'Ingrese el nombre para el stakeholder',
-      input: 'text',
-      inputAttributes: {
-        autocapitalize: 'off',
-      },
-      icon: 'info',
-      showCancelButton: false,
-      confirmButtonColor: '#3085d6',
-      confirmButtonText: 'Crear StakeHolder',
-    }).then((valor: string) => {
-      if (!valor || valor.length === 0) {
-        return;
-      }
-
-      this._stakeHolderService
-        .crearStakeholder(valor)
-        .subscribe(() => this.cargarStakeholders());
-    });
+    // const { value: valor } = Swal.fire({
+    //   title: 'Crear Stakeholder',
+    //   input: 'text',
+    //   icon: 'info',
+    //   showCancelButton: false,
+    //   confirmButtonColor: '#3085d6',
+    //   confirmButtonText: 'Crear StakeHolder',
+    // }).then((valor: string) => {
+    //   if (!valor || valor.length === 0) {
+    //     return;
+    //   }
+    //   this._stakeHolderService
+    //     .crearStakeholder(valor)
+    //     .subscribe(() => this.cargarStakeholders());
+    // });
   }
 
   actualizarImagen(stakeholder: Stakeholder) {

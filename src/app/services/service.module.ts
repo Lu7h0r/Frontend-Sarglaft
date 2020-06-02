@@ -10,6 +10,10 @@ import {
   LoginGuardGuard,
   SubirArchivoService,
   StakeholdersComponent,
+  StakeholderService,
+  ClienteService,
+  EmpleadoService,
+  ProveedorService,
 } from './service.index';
 
 @NgModule({
@@ -24,6 +28,10 @@ import {
     SubirArchivoService,
     ModalUploadService,
     StakeholdersComponent,
+    StakeholderService,
+    ClienteService,
+    EmpleadoService,
+    ProveedorService,
   ],
 })
 export class ServiceModule {}
